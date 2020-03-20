@@ -27,8 +27,13 @@ public class Controller {
                 najduza = rijeci[i];
             }
         }
-        if (najduza.contains(".")) {
+        if (najduza.contains(".") || najduza.contains("!") || najduza.contains("?") || najduza.contains(";") || najduza.contains(":") || najduza.contains(",")) {
             najduza = najduza.replace(".","");
+            najduza = najduza.replace("!","");
+            najduza = najduza.replace("?","");
+            najduza = najduza.replace(";","");
+            najduza = najduza.replace(":","");
+            najduza = najduza.replace(",","");
         }
         labela2.setText( najduza.toUpperCase() );
     }
